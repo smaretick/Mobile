@@ -1,0 +1,21 @@
+##############CHROME OPTIONS#########################################
+option = webdriver.ChromeOptions()
+extset = ['enable-automation', 'ignore-certificate-errors']
+ignimg = "profile.managed_default_content_settings.images"
+mobile = {'deviceName':'Galaxy S5'}
+#mobile = {'deviceName':'iPhone 6'}
+#mobile = {'deviceName':'iPad Mini'}
+option.add_argument("--disable-infobars") #Prevents msg Chrome is being controlled by automated software
+option.add_experimental_option("excludeSwitches", extset)
+option.add_experimental_option('mobileEmulation', mobile)
+#option.add_argument('--start-maximized')
+#option.add_argument('--headless') 
+option.add_argument('--window-size=1920,1080') #Galaxy S5 
+#option.add_argument('--window-size=750 , 1334') #iPhone 6
+#options.add_argument("--window-size=800,600")
+#options.add_argument("--window-size=1920x1080")
+option.add_argument('--disable-gpu') 
+#option.add_argument('-disable-popup-blocking')
+#option.add_argument('--disable-multi-display-layout')
+#option.add_argument('--3d-display-mode')
+#option.add_argument("--auto-open-devtools-for-tabs") #OPENS CHROME DEV TOOLS
